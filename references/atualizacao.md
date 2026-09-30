@@ -1,10 +1,10 @@
 # Atualização das fontes da skill
 
-Este procedimento se aplica à manutenção da skill quando o usuário fornecer novos materiais da disciplina.
+Este procedimento se aplica quando o usuário fornecer novos materiais da disciplina ou uma versão diferente de algum PDF cadastrado.
 
-1. Inventarie todos os arquivos novos ou alterados: título, tipo, versão ou data explícita, quantidade de páginas, identificador e hash SHA-256. Registre-os em `references/fontes.md` sem copiar o PDF para um repositório público por padrão.
-2. Leia o conteúdo integral relevante, incluindo tabelas, figuras, notas e exemplos. Diferencie prescrições, definições, recomendações e exemplos; anote as páginas exatas. Não deduza regras de um exemplo isolado.
-3. Compare as regras com as já registradas. Preserve o que ainda é válido, acrescente o que é novo e marque conflitos ou escopos distintos. Se as fontes não estabelecerem precedência, não escolha uma silenciosamente.
-4. Atualize somente os tópicos afetados nas referências e o roteamento em `SKILL.md`. Cada regra específica deve apontar para a fonte e página; cada referência deve ser descoberta pelo índice.
-5. Valide a estrutura da skill e faça uma revisão prática com um pedido realista. Confira se a resposta resultante respeita as fontes, separa fatos de inferências e indica lacunas sem inventar conteúdo.
-6. Registre em commit convencional, em português, as alterações da skill. Descreva na entrega quais fontes entraram, quais regras mudaram e quais conflitos permanecem.
+1. Inventarie cada arquivo novo ou alterado: título, nome exato, data ou versão explícita, quantidade de páginas e SHA-256. Compare o hash e o conteúdo com [fontes.md](fontes.md); não trate uma cópia com outro nome como aula adicional.
+2. Leia as páginas integralmente, incluindo tabelas, figuras, notas e exemplos relevantes. Diferencie definição, regra, recomendação, exemplo e instrução de atividade. Não transforme um exemplo ou exercício isolado em obrigação geral.
+3. Registre a fonte em `fontes.md` e acrescente regras específicas somente à referência pertinente. Aponte o ID e as páginas de cada regra; explique em `fontes.md` as divergências ou complementaridades que mudem decisões do agente.
+4. Compare regras novas com as anteriores. Se os PDFs antigos não estiverem disponíveis, use as sínteses rastreáveis como base e não afirme ter relido os originais; solicite o arquivo anterior quando um conflito exigir confronto direto. Preserve as regras ainda válidas, delimite escopos distintos e exponha conflitos sem escolher pela ordem de inclusão. Se a precedência não estiver clara nas fontes nem nas instruções do usuário, solicite decisão.
+5. Atualize o roteamento em `SKILL.md` apenas quando surgir um novo tipo de tarefa ou referência. Evite duplicar explicações em vários arquivos. Não publique o PDF original em um repositório público por padrão; a skill contém sínteses rastreáveis.
+6. Valide a estrutura com `quick_validate.py` da skill `skill-creator`, confira links internos e teste um pedido realista ligado ao material novo. Registre as alterações em commit convencional com mensagem em português.
