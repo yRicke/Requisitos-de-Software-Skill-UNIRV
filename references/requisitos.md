@@ -1,6 +1,6 @@
 # Levantamento, classificação e qualidade dos requisitos
 
-Consulte [fontes.md](fontes.md) para localizar os PDFs A01–A04. Esta referência se aplica ao trabalho com necessidades, requisitos e regras de negócio; os casos da biblioteca e da clínica são exemplos didáticos, não políticas transferíveis a outro sistema.
+Consulte [fontes.md](fontes.md) para localizar os PDFs A01–A04 e os complementos de A09. Esta referência se aplica ao trabalho com necessidades, requisitos e regras de negócio; os casos da biblioteca e da clínica são exemplos didáticos, não políticas transferíveis a outro sistema.
 
 ## Do problema ao requisito
 
@@ -16,11 +16,11 @@ Consulte [fontes.md](fontes.md) para localizar os PDFs A01–A04. Esta referênc
 | Não funcional | Qualidade do produto ou restrição de processo/implementação: desempenho, usabilidade, confiabilidade, segurança, portabilidade ou manutenibilidade. [A02, p. 4; A03, pp. 10–11] | Tempo de resposta; disponibilidade; restrição tecnológica justificada. |
 | De domínio | Restrição trazida pelo contexto de negócio, política institucional ou regulação do setor. [A01, p. 5; A02, p. 5] | Limite de empréstimos definido pela biblioteca. |
 
-Uma **regra de negócio** é uma política, restrição ou definição que já existe independentemente do software. Registre-a como tal e derive dela um ou mais requisitos implementáveis, sem confundir a regra com o comportamento do sistema. [A04, pp. 6–7] Uma restrição tecnológica imposta pode ser um requisito não funcional; escolher uma tecnologia por iniciativa da equipe antes de investigar a necessidade é decisão de arquitetura, não requisito de negócio. [A03, p. 10; A02, p. 15]
+Na abordagem de A04, uma **regra de negócio** é uma política, restrição ou definição que já existe independentemente do software. Registre-a como tal e derive dela um ou mais requisitos implementáveis, sem confundir a regra com o comportamento do sistema. [A04, pp. 6–7] A09 distingue essa categoria, chamada **crucial**, das **regras específicas da aplicação**, que organizam como o software realiza a política. Para rotulá-las no DERS, consulte [ders.md](ders.md); preserve o vínculo entre política e realização. [A09, pp. 8–10] Uma restrição tecnológica imposta pode ser um requisito não funcional; escolher uma tecnologia por iniciativa da equipe antes de investigar a necessidade é decisão de arquitetura, não requisito de negócio. [A03, p. 10; A02, p. 15]
 
 ## Escreva requisitos de qualidade
 
-- Dê identificador estável aos requisitos que precisam ser rastreados; a aula exemplifica **RF001**, **RF002** etc. para funcionais. Não presuma que os PDFs impõem uma sigla específica para todas as outras categorias. [A03, p. 9]
+- Dê identificador estável aos requisitos que precisam ser rastreados; A03 exemplifica **RF001**, **RF002** etc. para funcionais. A09 usa **RF01** e **RNF01** e explicita a coluna **Origem** no DERS. Preserve a convenção já adotada no projeto sem renumerar artefatos só para reproduzir o exemplo. [A03, p. 9; A09, pp. 10, 16]
 - Formule uma condição observável e completa, com contexto e limites quando necessários. Substitua adjetivos vagos, como “rápido” e “fácil”, por critérios verificáveis; para desempenho, a aula mostra medida, percentual e carga como dimensões possíveis, não valores padrão. [A03, pp. 6–8]
 - Revise se cada requisito é **claro e não ambíguo, completo, consistente, verificável, rastreável, necessário e factível** no tempo, custo e tecnologia disponíveis. Cheque conflitos com outros requisitos. [A03, pp. 6, 12–13]
 - Quando o usuário pedir uma especificação, detalhe o critério de aceitação apenas até onde as evidências sustentarem; marque medidas e políticas ainda não confirmadas como questões em aberto. A especificação deve permitir validação com interessados e verificação após a implementação. [A02, pp. 11–12, 17]
